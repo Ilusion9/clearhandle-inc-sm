@@ -3,22 +3,22 @@
 #endif
 #define _clearhandle_included
 
-stock void ClearArrayList(ArrayList &array)
+stock void ClearArray_Ex(ArrayList &list)
 {
-	int blockSize = array.BlockSize;
-	delete array;
-	array = new ArrayList(blockSize);
+	int blockSize = list.BlockSize;
+	delete list;
+	list = new ArrayList(blockSize);
 }
 
-stock void ClearArrayStack(ArrayStack &array)
+stock void ClearStack_Ex(ArrayStack &stack)
 {
-	int blockSize = array.BlockSize;
-	delete array;
-	array = new ArrayStack(blockSize);
+	int blockSize = stack.BlockSize;
+	delete stack;
+	stack = new ArrayStack(blockSize);
 }
 
-stock void ClearStringMap(StringMap &map)
+stock void ClearTrie_Ex(StringMap &trie)
 {
-	delete map;
-	map = new StringMap();
+	delete trie;
+	trie = new StringMap();
 }
